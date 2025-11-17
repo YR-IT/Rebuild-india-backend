@@ -9,7 +9,7 @@ function makeSlug(name) {
 	return slugify(name, {lower: true, strict: true, trim: true})
 }
 
-router.get('/', isAuthenticated, async (req, res) => {
+router.get('/', async (req, res) => {
 	try {
 		const items = await Category.find({isActive: true}).sort({name: 1}).lean()
 		res.json({
