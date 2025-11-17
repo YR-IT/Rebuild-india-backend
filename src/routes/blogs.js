@@ -55,7 +55,7 @@ router.get('blogbyid/:id', async (req, res) => {
 	}
 })
 
-router.post('/createblogs',isAuthenticated, upload.single('image'), async (req, res) => {
+router.post('/createblogs',isAuthenticated, async (req, res) => {
 	try {
 		const {categoryId, title, description, author, date} = req.body
 
@@ -181,7 +181,7 @@ router.put('updateblog/:id', isAuthenticated, async (req, res) => {
 	}
 })
 
-router.delete('deleteblog/:id',isAuthenticated, async (req, res) => {
+router.delete('/deleteblog/:id',isAuthenticated, async (req, res) => {
 	try {
 		const {id} = req.params
 
