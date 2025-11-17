@@ -1,4 +1,4 @@
-import {Router} from 'express'
+
 import slugify from 'slugify'
 import Category from '../models/Category.js'
 import isAuthenticated from '../middleware/authmiddleware.js'
