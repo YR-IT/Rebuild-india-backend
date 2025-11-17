@@ -181,7 +181,7 @@ router.put('updateblog/:id', isAuthenticated, async (req, res) => {
 	}
 })
 
-router.delete('/:id',isAuthenticated, async (req, res) => {
+router.delete('deleteblog/:id',isAuthenticated, async (req, res) => {
 	try {
 		const {id} = req.params
 
