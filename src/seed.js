@@ -33,7 +33,7 @@ async function run() {
 		if (!exists) {
 			const base = slugify(name, {lower: true, strict: true, trim: true})
 			const slug = await ensureSlugUnique(base)
-			await Category.create({name, slug})
+			await Category.create({name, slug, isActive: true})
 		}
 	}
 
