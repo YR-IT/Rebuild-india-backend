@@ -2,8 +2,8 @@ import {Router} from 'express'
 import slugify from 'slugify'
 import Category from '../models/Category.js'
 import isAuthenticated from '../middleware/authmiddleware.js'
-
-const router = Router()
+import express from 'express'
+const router = express.Router()
 
 function makeSlug(name) {
 	return slugify(name, {lower: true, strict: true, trim: true})
