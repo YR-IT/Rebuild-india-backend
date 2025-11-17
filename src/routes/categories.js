@@ -25,7 +25,7 @@ router.get('/getcategory', async (req, res) => {
 	}
 })
 
-router.post('/',isAuthenticated, async (req, res) => {
+router.post('/createcategory',isAuthenticated, async (req, res) => {
 	try {
 		let {name} = req.body || {}
 		if (typeof name !== 'string') {
