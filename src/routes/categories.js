@@ -1,4 +1,4 @@
-import {Router} from 'express'
+
 import slugify from 'slugify'
 import Category from '../models/Category.js'
 import isAuthenticated from '../middleware/authmiddleware.js'
@@ -9,7 +9,7 @@ function makeSlug(name) {
 	return slugify(name, {lower: true, strict: true, trim: true})
 }
 
-router.get('/', async (req, res) => {
+router.get('/getcategory', async (req, res) => {
 	try {
 		const items = await Category.find()
 		res.json({
