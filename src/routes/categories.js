@@ -11,7 +11,7 @@ function makeSlug(name) {
 
 router.get('/', async (req, res) => {
 	try {
-		const items = await Category.find({isActive: true}).sort({name: 1}).lean()
+		const items = await Category.find().sort({name: 1}).lean()
 		res.json({
 			categories: items.map(({_id, name, slug, createdAt}) => ({
 				_id,
